@@ -1,0 +1,24 @@
+{
+  "name": "boilerplate",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "autoprefixer": "postcss -u autoprefixer -r css/*",
+    "sass": "node-sass --output-style compressed -o css sass",
+    "serve": "browser-sync start --server --browser chrome --files \"css/*.css, **/*.js, **/*.html, !node_modules/**/*.html\"",
+    "build:css": "npm run sass && npm run autoprefixer",
+    "watch:css": "onchange \"sass\" -- npm run build:css",
+    "start": "npm-run-all -p serve watch:css"
+  },
+  "author": "FF",
+  "license": "ISC",
+  "devDependencies": {
+    "autoprefixer": "^6.3.6",
+    "browser-sync": "^2.12.8",
+    "node-sass": "^3.7.0",
+    "npm-run-all": "^2.1.1",
+    "onchange": "^2.4.0",
+    "postcss-cli": "^2.5.2"
+  }
+}

@@ -1,0 +1,104 @@
+$monteserat: 'Montserrat', sans-serif
+$raleway: 'Raleway', sans-serif
+
+body
+  width: 100%
+  height: 100vh
+  display: flex
+  flex-direction: column
+  justify-content: center
+  align-items: center
+  font-family: $raleway
+  overflow: hidden
+
+h1
+  margin-bottom: 50px
+  letter-spacing: 10px
+
+#startPrompt
+  display: flex
+  flex-direction: column
+  align-items: center
+
+#startPromptHeader
+  margin-bottom: 50px
+  font-size: 6em
+
+#gamePrompt
+  display: none
+  flex-direction: column
+  align-items: center
+
+.active
+  font-size: 1.5em
+  color: red
+
+.board
+  width: 390px
+  height: 390px
+  display: flex
+  flex-direction: column
+  margin-bottom: 50px
+
+.row
+  display: flex
+  flex-direction: row
+  border-bottom: solid 3px #000
+  &:last-child
+    border-bottom: none
+
+.cell
+  width: 130px
+  height: 130px
+  border-right: solid 3px #000
+  text-align: center
+  vertical-align: middle
+  line-height: 150px
+  font-size: 6em
+  cursor: pointer
+  &:last-child
+    border-right: none
+
+.btn
+  width: 150px
+  height: 50px
+  border: solid 3px #000
+  border-radius: 10px
+  background-color: transparent
+  font-size: 1.4em
+  font-weight: bold
+  cursor: pointer
+  transition: all 250ms ease-in-out
+  &:focus
+    outline: none
+  &:hover
+    color: #fff
+    background-color: #000
+
+.form
+  display: flex
+  flex-direction: column
+  margin-bottom: 50px
+  box-sizing: border-box
+  input
+    width: 400px
+    height: 80px
+    margin-bottom: 30px
+    font-size: 4em
+    border: none
+    &:last-child
+      margin-bottom: 0
+    &:focus
+      border-bottom: solid 2px #000
+      outline: none
+  label
+    margin-bottom: 10px
+
+.scoreCard
+  width: 400px
+  display: flex
+  justify-content: space-between
+  margin-bottom: 20px
+
+.scoreItem
+  display: inline
